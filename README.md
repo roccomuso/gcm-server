@@ -1,4 +1,4 @@
-# node-gcm
+# gcm-server
 [![npm](https://badge.fury.io/js/gcm-server.svg)](https://www.npmjs.com/package/gcm-server)
 
 gcm-server is a Node.JS library that start a Server to store the [**GCM**](https://developers.google.com/cloud-messaging/) clients Subscription ID. You can also send push notifications (thanks to [node-gcm](https://github.com/ToothlessGear/node-gcm)).
@@ -24,14 +24,14 @@ var gcm = require('gcm-server');
 
 // set the new server and the entry points before any app.listen.
 var GcmServer = new gcm.Server({
-	port: 3000
+  port: 3000
 });
 
 GcmServer.setNewTokenEntryPoint('/gcm/token/new');
 
 GcmServer.onNewToken(function(params, save){
-	// ... params validation and filtering
-	save({token: params.token, name: params.name}); // save into db (async).
+  // ... params validation and filtering
+  save({token: params.token, name: params.name}); // save into db (async).
 });
 
 GcmServer.start();
@@ -39,10 +39,10 @@ GcmServer.start();
 
 ### Available entry points
 
-- newTokenEntryPoint: '/gcm/token/new' // POST
-- deleteTokenEntryPoint: '/gcm/token/delete/:token' // GET
-- editTokenEntryPoint: '/gcm/token/edit' // POST
-- getTokenEntryPoint: '/gcm/token/get' // GET
+- newTokenEntryPoint - POST: '/gcm/token/new'
+- deleteTokenEntryPoint - GET: '/gcm/token/delete/:token'
+- editTokenEntryPoint - POST: '/gcm/token/edit'
+- getTokenEntryPoint - GET: '/gcm/token/get'
 
 
 ## GCM send - Example application

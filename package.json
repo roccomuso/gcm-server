@@ -1,6 +1,6 @@
 {
   "name": "gcm-server",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Node GCM server to save Client Subscription ID and send push notifications",
   "main": "index.js",
   "scripts": {
