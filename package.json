@@ -1,0 +1,32 @@
+{
+  "name": "gcm-server",
+  "version": "1.0.10",
+  "description": "Node GCM server to save Client Subscription ID and send push notifications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roccomuso/gcm-server.git"
+  },
+  "keywords": [
+    "gcm",
+    "server",
+    "subscription",
+    "id",
+    "token"
+  ],
+  "author": "Rocco Musolino <rocco@hackerstribe.com> (http://hackerstribe.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roccomuso/gcm-server/issues"
+  },
+  "homepage": "https://github.com/roccomuso/gcm-server#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "nedb": "^1.7.2",
+    "node-gcm": "^0.14.0"
+  }
+}
